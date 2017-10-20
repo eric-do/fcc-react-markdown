@@ -4,21 +4,28 @@ body {
   font-family: sans-serif;
 }
 
+.componentRow {
+  display:flex; 
+  flex-direction:row;
+  height: 90%;
+}
+
 #editor-wrap {
   width: 500px;
-  height: 200px;
-  background-color: dodgerblue;
+  height: 500px;
+  background-color: white;
   margin: 50px 0 50px 30px;
 }
 
 #preview-content {
-  overflow:scroll;
+  overflow-y:scroll;
+  height: inherit;
 }
 
 #preview-wrap {
   width: 500px;
-  height: 200px;
-  background-color: dodgerblue;
+  height: 500px;
+  background-color: lightgray;
   margin: 50px 0 50px 30px;
 }
 
@@ -29,7 +36,7 @@ body {
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  font-size: 10px
+  font-size: 1em;
 }
 
 #user-input {

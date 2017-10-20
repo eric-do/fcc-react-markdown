@@ -10,11 +10,15 @@ export default class Editor extends React.Component {
     }
 
     handleChange = (event) => {
+        console.log("Before setState: " + this.state.input);
         this.setState({
           input: event.target.value
-        });
+        }, this.convert);
+     }
+
+    convert() {
         this.props.convert(this.state.input);
-      }
+    }
 
     render() {
         return (
@@ -23,7 +27,6 @@ export default class Editor extends React.Component {
                 Editor
             </div>
             <textarea 
-                value={this.state.input}
                 type='text' 
                 name='userInput' 
                 id='user-input'

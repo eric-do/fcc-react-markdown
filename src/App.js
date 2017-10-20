@@ -17,13 +17,12 @@ class App extends Component {
     this.setState({
       markedText: marked(text)
     });
-    console.log("converted text: " + marked(text));
-    console.log("state: " + this.state.markedText);
+    console.log("toMarkdown converted text: " + marked(text));
   }
 
   render() {
     return (
-      <div>
+      <div className='componentRow'>
         <Editor convert={this.toMarkdown}/>
         <Preview marked={this.state.markedText}/>
       </div>

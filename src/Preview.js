@@ -16,15 +16,8 @@ export default class Preview extends React.Component {
             <div class='toolbar'>
                 Preview
             </div>
-            {/* <textarea 
-                value={this.props.marked}
-                type='text' 
-                name='userOutput' 
-                id='user-output' 
-                readOnly='true' /> */}
-            <div dangerouslySetInnerHTML={{__html:(this.props.marked || '')}}
+               <div dangerouslySetInnerHTML={{__html:(this.props.marked || '')}}
                 id='preview-content'>
-            
             </div>
         </div>
         )
