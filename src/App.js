@@ -14,14 +14,18 @@ class App extends Component {
 
   toMarkdown = (text) => {
     var marked = require('marked');
-    console.log(marked(text));
+    this.setState({
+      markedText: marked(text)
+    });
+    console.log("converted text: " + marked(text));
+    console.log("state: " + this.state.markedText);
   }
 
   render() {
     return (
       <div>
         <Editor convert={this.toMarkdown}/>
-        <Preview />
+        <Preview marked={this.state.markedText}/>
       </div>
     );
   }
