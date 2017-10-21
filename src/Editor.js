@@ -27,6 +27,7 @@ export default class Editor extends React.Component {
                 Editor
             </div>
             <textarea 
+                class='form-control'
                 type='text' 
                 name='userInput' 
                 id='user-input'

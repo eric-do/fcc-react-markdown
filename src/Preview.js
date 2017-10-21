@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 export default class Preview extends React.Component {
     constructor(props) {
@@ -16,9 +15,9 @@ export default class Preview extends React.Component {
             <div class='toolbar'>
                 Preview
             </div>
-               <div dangerouslySetInnerHTML={{__html:(this.props.marked || '')}}
+            <span dangerouslySetInnerHTML={{__html:(this.props.marked || '')}}
                 id='preview-content'>
-            </div>
+            </span>
         </div>
         )
     };

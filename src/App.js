@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Preview from './Preview.js';
 import Editor from './Editor.js';
+import { Navbar, Jumbotron, Button, Row, Col, Grid } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,11 @@ class App extends Component {
 
   toMarkdown = (text) => {
     var marked = require('marked');
+    
+    marked.setOptions({
+      sanitize: true,
+    });
+
     this.setState({
       markedText: marked(text)
     });
