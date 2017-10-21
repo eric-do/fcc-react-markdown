@@ -28,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='componentRow'>
+      <div className='row'>
         <Editor convert={this.toMarkdown}/>
         <Preview marked={this.state.markedText}/>
       </div>

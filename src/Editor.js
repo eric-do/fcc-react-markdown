@@ -22,7 +22,7 @@ export default class Editor extends React.Component {
 
     render() {
         return (
-        <div id='editor-wrap'>
+        <div id='editor-wrap' class='col-md-6'>
             <div class='toolbar'>
                 Editor
             </div>

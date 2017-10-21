@@ -11,7 +11,7 @@ export default class Preview extends React.Component {
 
     render() {
         return (
-        <div id='preview-wrap'>
+        <div id='preview-wrap' class='col-md-6'>
             <div class='toolbar'>
                 Preview
             </div>
