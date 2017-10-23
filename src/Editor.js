@@ -30,8 +30,16 @@ export default class Editor extends React.Component {
                 class='form-control'
                 type='text' 
                 name='userInput' 
-                id='user-input'
-                onChange={this.handleChange} />
+                id='editor'
+                onChange={this.handleChange}># Welcome to my React Markdown Previewer!
+                
+                ## This is a sub-heading...
+                ### And here's some other cool stuff:
+                  
+            
+                
+               
+</textarea>
         </div>
         )
     };
