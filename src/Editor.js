@@ -9,6 +9,10 @@ export default class Editor extends React.Component {
         }
     }
 
+    componentDidMount() {
+        //this.handleChange();
+    }
+
     handleChange = (event) => {
         console.log("Before setState: " + this.state.input);
         this.setState({
@@ -31,15 +35,8 @@ export default class Editor extends React.Component {
                 type='text' 
                 name='userInput' 
                 id='editor'
-                onChange={this.handleChange}># Welcome to my React Markdown Previewer!
-                
-                ## This is a sub-heading...
-                ### And here's some other cool stuff:
-                  
-            
-                
-               
-</textarea>
+                onChange={this.handleChange} 
+                value={this.props.unmarkedText}/>
         </div>
         )
     };

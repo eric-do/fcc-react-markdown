@@ -9,28 +9,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      markedText: ''
+      unmarkedText: 'test'
     }
   }
 
   toMarkdown = (text) => {
-    var marked = require('marked');
-    
-    marked.setOptions({
-      sanitize: true,
+      this.setState({
+        unmarkedText: text
     });
-
-    this.setState({
-      markedText: marked(text)
-    });
-    console.log("toMarkdown converted text: " + marked(text));
   }
 
   render() {
     return (
       <div className='row'>
-        <Editor convert={this.toMarkdown}/>
-        <Preview marked={this.state.markedText}/>
+        <Editor convert={this.toMarkdown} unmarkedText={this.state.unmarkedText}/>
+        <Preview unmarkedText={this.state.unmarkedText}/>
       </div>
     );
   }
