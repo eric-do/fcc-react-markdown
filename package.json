@@ -1,9 +1,11 @@
 {
   "name": "fcc-react-markdown",
+  "homepage": "http://eric-do.github.io/fcc-react-markdown",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "gh-pages": "^1.0.0",
     "marked": "^0.3.6",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
@@ -12,6 +14,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
