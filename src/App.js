@@ -1,31 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Preview from './Preview.js';
 import Editor from './Editor.js';
-import { Navbar, Jumbotron, Button, Row, Col, Grid } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      unmarkedText: placeholder
+      markdown: placeholder
     }
+    
   }
 
-  
-
-  toMarkdown = (text) => {
+  handleChange = (e) => {
+    console.log("handling change");
       this.setState({
-        unmarkedText: text
+        markdown: e.target.value
     });
   }
 
   render() {
     return (
       <div className='row'>
-        <Editor convert={this.toMarkdown} unmarkedText={this.state.unmarkedText}/>
-        <Preview unmarkedText={this.state.unmarkedText}/>
+        <Editor handleChange={this.handleChange} 
+                markdown={this.state.markdown}/>
+        <Preview markdown={this.state.markdown}/>
       </div>
     );
   }
