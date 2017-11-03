@@ -4,7 +4,7 @@ const Editor = (props) => {
         return(
             <div id='editor-wrap' class='col-md-6'>
                 <div class='toolbar'>
-                    Editor
+                    Markdown Editor
                 </div>
                 <textarea 
                     class='form-control'

@@ -4,7 +4,7 @@ const Preview = (props) => {
     return (
         <div id='preview-wrapper' class='col-md-6'>
             <div class='toolbar'>
-                Preview
+                Markdown Preview
             </div>
             <span dangerouslySetInnerHTML={{__html:(marked(props.markdown) || '')}}
                 id='preview'/>

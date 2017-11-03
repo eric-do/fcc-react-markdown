@@ -9,7 +9,6 @@ class App extends Component {
     this.state = {
       markdown: placeholder
     }
-    
   }
 
   handleChange = (e) => {
